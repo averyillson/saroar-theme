@@ -1,0 +1,39 @@
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+ul.footer-social {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	padding-left: 0;
+	margin: 0 auto;
+
+	li {
+		flex: 0 1 auto;
+		align-self: center;
+		margin: 0 .75em;
+	}
+}

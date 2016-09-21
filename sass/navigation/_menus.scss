@@ -1,0 +1,45 @@
+#menu-container {
+	display: none;
+}
+
+#menu-container.open {
+
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+	ul#main-navigation {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		li {
+			flex: 0 1 auto;
+			position: relative;
+			margin: 3rem 0;
+			&:hover > a,
+			&.focus > a {
+			}
+		}
+
+		a {
+			display: block;
+			text-decoration: none;
+		}
+
+		.current_page_item > a,
+		.current-menu-item > a,
+		.current_page_ancestor > a,
+		.current-menu-ancestor > a {
+		}
+	}
+}

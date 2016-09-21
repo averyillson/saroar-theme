@@ -1,0 +1,1 @@
+$(document).ready(function(){var n=function(){var n=$("#nav-button"),o=$("#menu-container");$(n).on("click",function(n){n.preventDefault(),$(o).toggleClass("open"),o.hasClass("open")?$("body").css({overflow:"hidden"}):$("body").css({overflow:"initial"})})},o=function(){var n=$("header"),o=n.innerHeight(),e=$(".video-hero");$(e).css({"margin-top":o})};n(),o()});
