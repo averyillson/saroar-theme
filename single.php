@@ -9,6 +9,18 @@
 
 get_header(); ?>
 
+	<div class="hero" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+		<div class="container">
+			<div class="row clear">
+				<div class="hero-content">
+					<div class="col-12 col-7-l col-7-m">
+						<h2><?php the_title(); ?></h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -19,11 +31,6 @@ get_header(); ?>
 
 			the_post_navigation();
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
 		endwhile; // End of the loop.
 		?>
 
@@ -31,5 +38,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

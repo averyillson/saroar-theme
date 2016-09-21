@@ -17,17 +17,34 @@ $( document ).ready(function() {
   };
 
   // Video Hero auto margin top calc();
-  var videoHeroTopMargin = function() {
+  var VideoHeroTopMargin = function() {
 
     var header = $('header'),
     headerHeight = header.innerHeight(),
-    videoContainer = $('.video-hero');
+    videoContainer = $('.video-hero'),
+    heroGeneral = $('.hero'),
+    heroArchive = $('.archive-hero');
 
     $(videoContainer).css({'margin-top': headerHeight });
+    $(heroGeneral).css({'margin-top': headerHeight });
+    $(heroArchive).css({'margin-top': headerHeight });
 
   };
 
+  // Hero auto margin top calc();
+  var HeroTopMargin = function() {
+
+    var header = $('header'),
+    headerHeight = header.innerHeight(),
+    heroGeneral = $('.hero'),
+    heroArchive = $('.archive-hero');
+
+    $(heroGeneral).css({'margin-top': headerHeight });
+    $(heroArchive).css({'margin-top': headerHeight });
+  };
+
   menuToggle();
-  videoHeroTopMargin();
+  VideoHeroTopMargin();
+  HeroTopMargin();
 
 });

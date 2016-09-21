@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages.
+ * Template Name: Front Page
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -19,8 +19,6 @@ get_header(); ?>
 	$the_query = new WP_Query( array( 'post_type' => 'article', 'posts_per_page' => 1 ) );
 
 	if ( $the_query->have_posts() ) : ?>
-
-		<!-- pagination here -->
 
 		<!-- the loop -->
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -41,7 +39,7 @@ get_header(); ?>
 		<?php endwhile; ?>
 		<!-- end of the loop -->
 
-		<?php wp_reset_postdata(); ?>
+		<?php wp_reset_postdata   (); ?>
 
 	<?php endif; ?>
 
@@ -82,9 +80,11 @@ get_header(); ?>
 					<div class="container">
 						<div class="row clear">
 							<div class="col-12 col-4-m col-4-l">
-								<?php the_post_thumbnail( 'medium' ); ?>
-								<?php echo '<h2>' . get_the_title() . '</h2>'; ?>
-								<?php echo '<p>' . the_excerpt() . '</p>'; ?>
+								<article class="post-article">
+									<?php the_post_thumbnail( 'full', array( 'class' => 'image-fluid' ) ); ?>
+									<a href="<?php the_permalink(); ?>"><?php echo '<h2>' . get_the_title() . '</h2>'; ?></a>
+									<?php echo '<p>' . the_excerpt() . '</p>'; ?>
+								</article>
 							</div>
 						</div>
 					</div>
@@ -132,9 +132,11 @@ get_header(); ?>
 					<div class="container">
 						<div class="row clear">
 							<div class="col-12 col-4-m col-4-l">
-								<?php the_date('F j, Y ', '<h4>', '</h4>'); ?>
-								<a href="<?php the_permalink(); ?>"><?php echo '<h2>' . get_the_title() . '</h2>'; ?></a>
-								<?php echo '<p>' . the_excerpt() . '</p>'; ?>
+								<article class="post-blog">
+									<?php the_date('F j, Y ', '<h4>', '</h4>'); ?>
+									<a href="<?php the_permalink(); ?>"><?php echo '<h2>' . get_the_title() . '</h2>'; ?></a>
+									<?php echo '<p>' . the_excerpt() . '</p>'; ?>
+								</article>
 							</div>
 						</div>
 					</div>

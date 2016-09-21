@@ -360,6 +360,7 @@ header#masthead-fp {
   header#masthead-fp div {
     flex: 0 1 auto;
     align-self: center;
+    flex-basis: auto;
     margin: 0 20px; }
   header#masthead-fp button {
     color: #fff;
@@ -381,6 +382,7 @@ header#masthead {
   header#masthead div {
     flex: 0 1 auto;
     align-self: center;
+    flex-basis: auto;
     margin: 0 20px; }
   header#masthead button {
     color: #000;
@@ -407,10 +409,41 @@ footer#colophon {
   align-items: flex-end; }
   .hero .hero-content {
     flex: auto;
-    align-self: flex-end; }
+    align-self: flex-end;
+    flex-basis: auto; }
 
 #primary {
   position: relative; }
+
+.aboutContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch; }
+  .aboutContainer .leftSideContent {
+    order: 1;
+    flex: 0 2 auto;
+    align-self: auto;
+    flex-basis: auto; }
+  .aboutContainer .rightSideContent {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    flex-basis: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 80px;
+    height: 50vh; }
+
+.archiveArticle {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 21.875em;
+  padding-top: 25%;
+  padding-bottom: 25%; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -544,6 +577,7 @@ a {
     padding-left: 0; }
     #menu-container.open ul#main-navigation li {
       flex: 0 1 auto;
+      flex-basis: auto;
       position: relative;
       margin: 3rem 0; }
     #menu-container.open ul#main-navigation a {
