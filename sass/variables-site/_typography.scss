@@ -1,5 +1,10 @@
-$font__main: sans-serif;
+@import 'https://fonts.googleapis.com/css?family=Holtwood+One+SC|Open+Sans:400,600i,700|Ultra';
+
+$font__main: 'Open Sans', sans-serif;
+$font__heading: 'Holtwood One SC', sans-serif;
+$font__blockquote: 'Ultra', sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+$font__line-height-blockquote: 1.75;

@@ -28,7 +28,7 @@ get_header(); ?>
 					<div class="row clear">
 						<div class="hero-content">
 							<div class="col-12 col-7-l col-7-m">
-								<h3>Latest Article</h3>
+								<p class="latest">Latest Article</p>
 								<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 							</div>
 						</div>
@@ -61,7 +61,7 @@ get_header(); ?>
 
 		<div class="container">
 			<div class="row clear">
-				<div class="col-3 left">
+				<div class="col-12">
 					<h3>Articles</h3>
 				</div>
 				<div class="col-12">
@@ -113,7 +113,7 @@ get_header(); ?>
 
 		<div class="container">
 			<div class="row clear">
-				<div class="col-3 left">
+				<div class="col-12">
 					<h3>On Assignment</h3>
 				</div>
 				<div class="col-12">

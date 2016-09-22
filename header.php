@@ -39,7 +39,8 @@
 					</div><!-- .branding -->
 				</div>
 				<div>
-					<button id="site-search" role="search">
+					<!-- function not needed yet -->
+					<button id="site-search" role="search" class="none">
 						<i class="fa fa-search fa-2x"></i>
 					</button><!-- .search -->
 				</div>
@@ -62,7 +63,8 @@
 				</div><!-- .branding -->
 			</div>
 			<div>
-				<button id="site-search" role="search">
+				<!-- function not needed yet -->
+				<button id="site-search" role="search" class="none">
 					<i class="fa fa-search fa-2x"></i>
 				</button><!-- .search -->
 			</div>

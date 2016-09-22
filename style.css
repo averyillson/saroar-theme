@@ -41,6 +41,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+@import "https://fonts.googleapis.com/css?family=Holtwood+One+SC|Open+Sans:400,600i,700|Ultra";
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -82,7 +83,10 @@ template {
   display: none; }
 
 a {
-  background-color: transparent; }
+  background-color: transparent;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold; }
 
 a:active,
 a:hover {
@@ -100,7 +104,7 @@ dfn {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.67em 0 0 0; }
 
 mark {
   background: #ff0;
@@ -225,21 +229,28 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  font-family: "Holtwood One SC", sans-serif;
+  clear: both;
+  color: #000; }
 
 p {
+  font-family: "Open Sans", sans-serif;
   margin-bottom: 1.5em; }
 
 dfn, cite, em, i {
   font-style: italic; }
 
 blockquote {
+  font-family: "Ultra", sans-serif;
+  color: #000;
+  font-size: 28px;
+  font-size: 1.75rem;
   margin: 0 1.5em; }
 
 address {
@@ -288,15 +299,15 @@ body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */ }
 
-blockquote, q {
-  quotes: "" ""; }
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: ""; }
+blockquote:before, q:before {
+  quotes: "&#8220;"; }
+blockquote:after, q:after {
+  quotes: "&#8221;"; }
 
 hr {
-  background-color: #ccc;
+  background-color: #000;
   border: 0;
-  height: 1px;
+  height: 2px;
   margin-bottom: 1.5em; }
 
 ul, ol {
@@ -340,7 +351,7 @@ table {
   margin: 0 0 1.5em;
   width: 100%; }
 
-header#masthead-fp {
+#masthead-fp {
   position: absolute;
   top: 0;
   z-index: 1000;
@@ -357,16 +368,16 @@ header#masthead-fp {
   /* IE6-9 */
   display: flex;
   justify-content: space-around; }
-  header#masthead-fp div {
+  #masthead-fp div {
     flex: 0 1 auto;
     align-self: center;
     flex-basis: auto;
     margin: 0 20px; }
-  header#masthead-fp button {
+  #masthead-fp button {
     color: #fff;
     padding: .6em .4em; }
 
-header#masthead {
+#masthead {
   position: absolute;
   top: 0;
   z-index: 1000;
@@ -379,23 +390,24 @@ header#masthead {
   box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-around; }
-  header#masthead div {
+  #masthead div {
     flex: 0 1 auto;
     align-self: center;
     flex-basis: auto;
     margin: 0 20px; }
-  header#masthead button {
+  #masthead button {
     color: #000;
     padding: .6em .4em; }
 
-footer#colophon {
+#colophon {
   background-color: #000;
-  padding: 3.25em .125em; }
-  footer#colophon a {
+  padding: 3.25em .125em;
+  margin-top: 80px; }
+  #colophon a {
     color: #fff; }
 
 .hero {
-  height: 800px;
+  height: 645px;
   width: 100%;
   padding-bottom: 2.5em;
   background-repeat: no-repeat;
@@ -406,11 +418,39 @@ footer#colophon {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  align-items: flex-end; }
+  position: relative;
+  z-index: 0; }
+  .hero:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+    /* FF3.6-15 */
+    background: rgba(0, 0, 0, 0.3);
+    /* Chrome10-25,Safari5.1-6 */
+    background: lgba(0, 0, 0, 0.3);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#26000000',GradientType=0 );
+    /* IE6-9 */ }
   .hero .hero-content {
+    position: relative;
+    z-index: 2;
     flex: auto;
     align-self: flex-end;
     flex-basis: auto; }
+    .hero .hero-content .latest {
+      font-family: "Open Sans", sans-serif;
+      color: #fff;
+      margin-bottom: 10px; }
+    .hero .hero-content h2 {
+      font-size: 36px;
+      font-size: 2.25rem;
+      color: #fff;
+      margin-top: 0; }
 
 #primary {
   position: relative; }
@@ -542,11 +582,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #000; }
   a:visited {
-    color: purple; }
+    color: #000; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #029d97; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -571,18 +611,21 @@ a {
   justify-content: center;
   align-items: center;
   align-content: center; }
-  #menu-container.open ul#main-navigation {
+  #menu-container.open #main-navigation {
     list-style: none;
     margin: 0;
     padding-left: 0; }
-    #menu-container.open ul#main-navigation li {
+    #menu-container.open #main-navigation li {
       flex: 0 1 auto;
       flex-basis: auto;
       position: relative;
       margin: 3rem 0; }
-    #menu-container.open ul#main-navigation a {
+    #menu-container.open #main-navigation a {
       display: block;
-      text-decoration: none; }
+      text-decoration: none;
+      font-family: "Holtwood One SC", sans-serif;
+      font-size: 48px;
+      font-size: 3rem; }
 
 /*--------------------------------------------------------------
 # Accessibility
