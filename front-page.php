@@ -70,6 +70,9 @@ get_header(); ?>
 			</div>
 		</div>
 
+
+		<div class="container">
+			<div class="row clear">
 		<?php
 			$the_query = new WP_Query( array( 'post_type' => 'article' , 'posts_per_page' => 3 , 'offset' => 1 ) );
 
@@ -77,8 +80,7 @@ get_header(); ?>
 			if ( $the_query->have_posts() ) {
 				while ( $the_query->have_posts() ) { $the_query->the_post(); ?>
 
-					<div class="container">
-						<div class="row clear">
+
 							<div class="col-12 col-4-m col-4-l">
 								<article class="post-article">
 									<?php the_post_thumbnail( 'full', array( 'class' => 'image-fluid' ) ); ?>
@@ -86,8 +88,7 @@ get_header(); ?>
 									<?php echo '<p>' . the_excerpt() . '</p>'; ?>
 								</article>
 							</div>
-						</div>
-					</div>
+
 
 				<?php
 
@@ -95,17 +96,16 @@ get_header(); ?>
 				wp_reset_postdata();
 			} else { ?>
 
-				<div class="container">
-					<div class="row clear">
 						<div class="col-10-l col-10-m col-10 center center-l center-m">
 							<p class="text-center">
 								NO POSTS FOUND.
 							</p>
 						</div>
-					</div>
-				</div>
 
 			<?php } ?>
+
+		</div>
+	</div>
 
 	</section>
 

@@ -351,140 +351,6 @@ table {
   margin: 0 0 1.5em;
   width: 100%; }
 
-#masthead-fp {
-  position: absolute;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  height: 80px;
-  padding: 1.125em 0;
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#00000000',GradientType=0 );
-  /* IE6-9 */
-  display: flex;
-  justify-content: space-around; }
-  #masthead-fp div {
-    flex: 0 1 auto;
-    align-self: center;
-    flex-basis: auto;
-    margin: 0 20px; }
-  #masthead-fp button {
-    color: #fff;
-    padding: .6em .4em; }
-
-#masthead {
-  position: absolute;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  height: 80px;
-  padding: 1.125em 0;
-  background-color: #fff;
-  -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.75);
-  display: flex;
-  justify-content: space-around; }
-  #masthead div {
-    flex: 0 1 auto;
-    align-self: center;
-    flex-basis: auto;
-    margin: 0 20px; }
-  #masthead button {
-    color: #000;
-    padding: .6em .4em; }
-
-#colophon {
-  background-color: #000;
-  padding: 3.25em .125em;
-  margin-top: 80px; }
-  #colophon a {
-    color: #fff; }
-
-.hero {
-  height: 645px;
-  width: 100%;
-  padding-bottom: 2.5em;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: scroll;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  position: relative;
-  z-index: 0; }
-  .hero:before {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    bottom: 0;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.3);
-    /* FF3.6-15 */
-    background: rgba(0, 0, 0, 0.3);
-    /* Chrome10-25,Safari5.1-6 */
-    background: lgba(0, 0, 0, 0.3);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#26000000',GradientType=0 );
-    /* IE6-9 */ }
-  .hero .hero-content {
-    position: relative;
-    z-index: 2;
-    flex: auto;
-    align-self: flex-end;
-    flex-basis: auto; }
-    .hero .hero-content .latest {
-      font-family: "Open Sans", sans-serif;
-      color: #fff;
-      margin-bottom: 10px; }
-    .hero .hero-content h2 {
-      font-size: 36px;
-      font-size: 2.25rem;
-      color: #fff;
-      margin-top: 0; }
-
-#primary {
-  position: relative; }
-
-.aboutContainer {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: stretch;
-  align-content: stretch; }
-  .aboutContainer .leftSideContent {
-    order: 1;
-    flex: 0 2 auto;
-    align-self: auto;
-    flex-basis: auto; }
-  .aboutContainer .rightSideContent {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-    flex-basis: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    margin-top: 80px;
-    height: 50vh; }
-
-.archiveArticle {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 21.875em;
-  padding-top: 25%;
-  padding-bottom: 25%; }
-
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -623,6 +489,7 @@ a {
     #menu-container.open #main-navigation a {
       display: block;
       text-decoration: none;
+      text-align: center;
       font-family: "Holtwood One SC", sans-serif;
       font-size: 48px;
       font-size: 3rem; }
@@ -2954,3 +2821,163 @@ object {
 
   .pad-60-print {
     padding: 60px; } }
+/*--------------------------------------------------------------
+# Mobile Styles
+--------------------------------------------------------------*/
+#masthead-fp {
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 80px;
+  padding: 1.125em 0;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#00000000',GradientType=0 );
+  /* IE6-9 */
+  display: flex;
+  justify-content: space-around; }
+  #masthead-fp div {
+    flex: 0 1 auto;
+    align-self: center;
+    flex-basis: auto;
+    margin: 0 20px; }
+  #masthead-fp button {
+    color: #fff;
+    padding: .6em .4em; }
+
+#masthead {
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 80px;
+  padding: 1.125em 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-around; }
+  #masthead div {
+    flex: 0 1 auto;
+    align-self: center;
+    flex-basis: auto;
+    margin: 0 20px; }
+  #masthead button {
+    color: #000;
+    padding: .6em .4em; }
+
+#colophon {
+  background-color: #000;
+  padding: 3.25em .125em;
+  margin-top: 80px; }
+  #colophon a {
+    color: #fff; }
+
+.hero {
+  height: 645px;
+  width: 100%;
+  padding-bottom: 2.5em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  z-index: 0; }
+  .hero:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+    /* FF3.6-15 */
+    background: rgba(0, 0, 0, 0.3);
+    /* Chrome10-25,Safari5.1-6 */
+    background: lgba(0, 0, 0, 0.3);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#26000000',GradientType=0 );
+    /* IE6-9 */ }
+  .hero .hero-content {
+    position: relative;
+    z-index: 2;
+    flex: auto;
+    align-self: flex-end;
+    flex-basis: auto; }
+    .hero .hero-content .latest {
+      font-family: "Open Sans", sans-serif;
+      color: #fff;
+      margin-bottom: 10px; }
+    .hero .hero-content h2 {
+      font-size: 2.25px;
+      font-size: 0.140625rem;
+      color: #fff;
+      margin-top: 0; }
+
+#primary {
+  position: relative; }
+
+.aboutContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch; }
+
+.leftSideContent {
+  order: 1;
+  flex: 0 2 auto;
+  align-self: auto;
+  flex-basis: auto; }
+
+.rightSideContent {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  flex-basis: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 50vh; }
+
+.archiveArticle {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 21.875em;
+  padding-top: 25%;
+  padding-bottom: 25%; }
+
+/*--------------------------------------------------------------
+# Tablet Styles
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Desktop Styles
+--------------------------------------------------------------*/
+@media screen and (min-width: 980px) {
+  .aboutContainer {
+    flex-direction: row; }
+
+  .leftSideContent {
+    width: 50%; }
+
+  .rightSideContent {
+    width: 50%;
+    height: calc(100vh - 232px);
+    margin-bottom: -80px; }
+
+  #colophon {
+    position: relative;
+    bottom: 0;
+    width: 100%; } }
