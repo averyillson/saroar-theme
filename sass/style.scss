@@ -112,3 +112,24 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "base/_mixins";
 @import "base/_grid";
 @import "base/helpers";
+
+/*--------------------------------------------------------------
+# Mobile Styles
+--------------------------------------------------------------*/
+@import "mobile-styles";
+
+/*--------------------------------------------------------------
+# Tablet Styles
+--------------------------------------------------------------*/
+
+@media screen and (min-width: $breakpoint-m) {
+	@import "tablet-styles";
+};
+
+/*--------------------------------------------------------------
+# Desktop Styles
+--------------------------------------------------------------*/
+
+@media screen and (min-width: $breakpoint-l) {
+	@import "desktop-styles";
+};

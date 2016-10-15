@@ -1,0 +1,19 @@
+.aboutContainer {
+  flex-direction: row;
+}
+
+.leftSideContent {
+  width: 50%;
+}
+
+.rightSideContent {
+  width: 50%;
+  height: calc(100vh - 232px);
+  margin-bottom: -80px;
+}
+
+#colophon {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
