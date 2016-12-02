@@ -8,8 +8,10 @@
 
 .rightSideContent {
   width: 50%;
-  height: calc(100vh - 232px);
+  height: auto;
   margin-bottom: -80px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #colophon {

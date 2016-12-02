@@ -35,7 +35,7 @@
 				</div>
 				<div>
 					<div class="branding">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="/wp-content/themes/saroar/images/se-logo-w.png" alt="Sarah Espedido Logo" class="img-fluid center" /></a>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="/wp-content/themes/saroar-theme/images/se-logo-w.png" alt="Sarah Espedido Logo" class="img-fluid center" /></a>
 					</div><!-- .branding -->
 				</div>
 				<div>
@@ -58,7 +58,7 @@
 			</div>
 			<div>
 				<div class="branding">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="/wp-content/themes/saroar/images/se-logo-b.png" alt="Sarah Espedido Logo" class="img-fluid" />
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="/wp-content/themes/saroar-theme/images/se-logo-b.png" alt="Sarah Espedido Logo" class="img-fluid" />
 					</a>
 				</div><!-- .branding -->
 			</div>
