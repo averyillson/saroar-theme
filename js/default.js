@@ -16,24 +16,14 @@ $( document ).ready(function() {
     });
   })();
 
-  // Video Hero auto margin top calc();
+  // Content auto margin top calc();
   (function() {
 
     var header = $('header'),
     headerHeight = header.innerHeight(),
-    videoContainer = $('.video-hero');
+    contentContainer = $('#content');
 
-    $(videoContainer).css({'margin-top': headerHeight });
-  })();
-
-  // Video Hero auto margin top calc();
-  (function() {
-
-    var header = $('header'),
-    headerHeight = header.innerHeight(),
-    aboutContainer = $('.aboutContainer');
-
-    $(aboutContainer).css({'margin-top': headerHeight });
+    $(contentContainer).css({'margin-top': headerHeight });
   })();
 
 });

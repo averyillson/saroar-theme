@@ -8,8 +8,7 @@
 
 .rightSideContent {
   width: 50%;
-  height: auto;
-  margin-bottom: -80px;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -18,4 +17,12 @@
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+.post-article {
+  height: 500px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
 }

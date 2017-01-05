@@ -26,7 +26,7 @@
 
 	<?php if ( is_front_page() ) { ?>
 
-			<header id="masthead-fp" class="site-header" role="banner">
+			<header id="masthead" class="site-header" role="banner">
 
 				<div>
 					<button id="nav-button" role="navigation">
@@ -35,7 +35,7 @@
 				</div>
 				<div>
 					<div class="branding">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="/wp-content/themes/saroar-theme/images/se-logo-w.png" alt="Sarah Espedido Logo" class="img-fluid center" /></a>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="/wp-content/themes/saroar-theme/images/se-logo-b.png" alt="Sarah Espedido Logo" class="img-fluid center" /></a>
 					</div><!-- .branding -->
 				</div>
 				<div>
@@ -81,9 +81,10 @@
 				generating the navigation.
 			*/
 			$args = array(
-				'container'			=>			'',
-				'menu_id'			=>			'main-navigation',
-				'menu_class'			=>			'menu'
+				'container'			=>	'',
+				'menu_id'				=>	'main-navigation',
+				'menu_class'		=>	'menu',
+				'menu'					=> 	'main_menu'
 			);
 
 			wp_nav_menu( $args )

@@ -1,3 +1,4 @@
-sass/.sass-cache/*
-
-*.codekit
+.sass-cache/
+*.css.map
+*config.codekit
+/min

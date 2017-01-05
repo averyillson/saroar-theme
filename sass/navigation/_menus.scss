@@ -6,7 +6,7 @@
 
 	position: absolute;
 	bottom: 0;
-	z-index: 1;
+	z-index: 9999;
 	width: 100vw;
 	height: 100vh;
 	background-color: #fff;
@@ -18,15 +18,16 @@
 	align-content: center;
 
 	#main-navigation {
-		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		list-style-type: none;
 
 		li {
 			flex: 0 1 auto;
 			flex-basis: auto;
 			position: relative;
 			margin: 3rem 0;
+
 			&:hover > a,
 			&.focus > a {
 			}

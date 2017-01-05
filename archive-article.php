@@ -9,16 +9,6 @@
 
 get_header(); ?>
 
-	<header class="archive-hero">
-		<div class="container">
-			<div class="row clear">
-				<div class="col-5 left">
-					<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
-				</div>
-			</div>
-		</div>
-	</header><!-- .page-header -->
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -28,20 +18,19 @@ get_header(); ?>
 			while ( have_posts( ) ) : the_post(); ?>
 
 				<article class="archiveArticle" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
-					<div class="container">
-						<div class="row clear">
-							<div class="col-12 col-8-m col-8-l">
-								<?php the_title(); ?>
-								<?php echo '<h4>' . get_the_date() . '</h4>'; ?>
-								<?php the_excerpt(); ?>
+						<div class="container">
+							<div class="row clear">
+								<div class="col-12 col-6-m col-6-l">
+									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+									<?php echo '<h4>' . get_the_date() . '</h4>'; ?>
+									<p><?php the_excerpt(); ?></p>
+								</div>
 							</div>
 						</div>
-					</div>
 				</article>
 
-			<?php endwhile;
 
-			the_posts_navigation();
+			<?php endwhile;
 
 		else :
 
