@@ -468,7 +468,7 @@ a {
 #menu-container.open {
   position: absolute;
   bottom: 0;
-  z-index: 9999;
+  z-index: 900;
   width: 100vw;
   height: 100vh;
   background-color: #fff;

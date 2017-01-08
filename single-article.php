@@ -22,27 +22,22 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-		<header class="entry-header">
-			<div class="container">
-				<div class="row clear">
-					<div class="col-12">
-						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<header class="entry-header">
+				<div class="container">
+					<div class="row clear">
+						<div class="col-12">
+							<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+						</div>
 					</div>
 				</div>
-			</div>
-		</header><!-- .entry-header -->
+			</header><!-- .entry-header -->
+			<?php
+				while ( have_posts() ) : the_post();
 
-		<?php
-		while ( have_posts() ) : the_post();
+					get_template_part( 'template-parts/content', get_post_format() );
 
-			get_template_part( 'template-parts/content', get_post_format() );
-
-			the_post_navigation();
-
-		endwhile; // End of the loop.
-		?>
-
+				endwhile; // End of the loop.
+			?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

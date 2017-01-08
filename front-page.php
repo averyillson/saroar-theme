@@ -13,10 +13,8 @@
  */
 
 get_header(); ?>
-
 	<?php
-
-	$the_query = new WP_Query( array( 'post_type' => 'article', 'posts_per_page' => 1 ) );
+		$the_query = new WP_Query( array( 'post_type' => 'article', 'posts_per_page' => 1 ) );
 
 	if ( $the_query->have_posts() ) : ?>
 
@@ -42,7 +40,6 @@ get_header(); ?>
 		<?php wp_reset_postdata   (); ?>
 
 	<?php endif; ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -58,7 +55,6 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 	<section id="articles">
-
 		<div class="container">
 			<div class="row clear">
 				<div class="col-12">
@@ -69,96 +65,38 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-
-
 		<div class="container">
 			<div class="row clear">
-		<?php
-			$the_query = new WP_Query( array( 'post_type' => 'article' , 'posts_per_page' => 3 , 'offset' => 1 ) );
+			<?php
+				$the_query = new WP_Query( array( 'post_type' => 'article' , 'posts_per_page' => 3 , 'offset' => 1 ) );
 
-			// The Loop
-			if ( $the_query->have_posts() ) {
+				// The Loop
+				if ( $the_query->have_posts() ) {
 				while ( $the_query->have_posts() ) { $the_query->the_post(); ?>
 
+					<div class="col-12 col-12-m col-6-l">
+						<a href="<?php the_permalink(); ?>">
+							<article class="post-article">
+								<?php the_post_thumbnail( 'full', array( 'class' => 'image-fluid' ) ); ?>
+								<?php echo '<h2>' . get_the_title() . '</h2>'; ?>
+								<?php echo '<p>' . the_excerpt() . '</p>'; ?>
+							</article>
+						</a>
+					</div>
 
-							<div class="col-12 col-4-m col-4-l">
-								<article class="post-article">
-									<?php the_post_thumbnail( 'full', array( 'class' => 'image-fluid' ) ); ?>
-									<a href="<?php the_permalink(); ?>"><?php echo '<h2>' . get_the_title() . '</h2>'; ?></a>
-									<?php echo '<p>' . the_excerpt() . '</p>'; ?>
-								</article>
-							</div>
-
-
-				<?php
-
+				<?php }
+					wp_reset_postdata();
 				}
-				wp_reset_postdata();
-			} else { ?>
+				else { ?>
 
-						<div class="col-10-l col-10-m col-10 center center-l center-m">
-							<p class="text-center">
-								NO POSTS FOUND.
-							</p>
-						</div>
-
+					<div class="col-10-l col-10-m col-10 center center-l center-m">
+						<p class="text-center">
+							NO POSTS FOUND.
+						</p>
+					</div>
 			<?php } ?>
-
-		</div>
-	</div>
-
-	</section>
-
-	<section id="blog">
-
-		<div class="container">
-			<div class="row clear">
-				<div class="col-12">
-					<h3>On Assignment</h3>
-				</div>
-				<div class="col-12">
-					<hr>
-				</div>
 			</div>
 		</div>
-
-		<?php
-			$the_query = new WP_Query( array( 'posts_per_page' => 3 ) );
-
-			// The Loop
-			if ( $the_query->have_posts() ) {
-				while ( $the_query->have_posts() ) { $the_query->the_post(); ?>
-
-					<div class="container">
-						<div class="row clear">
-							<div class="col-12 col-4-m col-4-l">
-								<article class="post-blog">
-									<?php the_date('F j, Y ', '<h4>', '</h4>'); ?>
-									<a href="<?php the_permalink(); ?>"><?php echo '<h2>' . get_the_title() . '</h2>'; ?></a>
-									<?php echo '<p>' . the_excerpt() . '</p>'; ?>
-								</article>
-							</div>
-						</div>
-					</div>
-
-				<?php
-
-				}
-				wp_reset_postdata();
-			} else { ?>
-
-				<div class="container">
-					<div class="row clear">
-						<div class="col-10-l col-10-m col-10 center center-l center-m">
-							<p class="text-center">
-								NO POSTS FOUND.
-							</p>
-						</div>
-					</div>
-				</div>
-
-			<?php } ?>
-
 	</section>
 
 <?php

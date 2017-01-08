@@ -51,10 +51,22 @@
 		"oAP": "\/footer.php",
 		"oF": 0
 		},
+	"\/front-page.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/front-page.php",
+		"oF": 0
+		},
 	"\/full-width-page.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/full-width-page.php",
+		"oF": 0
+		},
+	"\/functions.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/functions.php",
 		"oF": 0
 		},
 	"\/header.php": {
@@ -738,6 +750,12 @@
 		"oAP": "\/style-min.css",
 		"oF": 0,
 		"oS": 0
+		},
+	"\/template-parts\/article.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/article.php",
+		"oF": 0
 		},
 	"\/template-parts\/content-none.php": {
 		"ft": 8192,
