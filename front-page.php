@@ -40,16 +40,23 @@ get_header(); ?>
 		<?php wp_reset_postdata   (); ?>
 
 	<?php endif; ?>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
-			endwhile; // End of the loop.
-			?>
+			<div class="container">
+				<div class="row clear">
+					<div class="col-12 col-12-m col-10-l center-l">
+						<?php while ( have_posts() ) : the_post(); ?>
+							<a href="<?php the_permalink(); ?>">
+								<article class="blog-article">
+									<?php echo '<h2>' . get_the_title() . '</h2>'; ?>
+									<?php echo '<p>' . the_excerpt() . '</p>'; ?>
+								</article>
+							</a>
+						<?php	endwhile; // End of the loop. ?>
+				</div>
+			</div>
+		</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
