@@ -23,20 +23,27 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<div class="container">
+				<div class="row clear">
+					<div class="col-12 col-8-l col-10-m center-m center-l">
+						<?php
+						while ( have_posts() ) : the_post();
 
-		<?php
-		while ( have_posts() ) : the_post();
+							get_template_part( 'template-parts/content', get_post_format() );
 
-			get_template_part( 'template-parts/content', get_post_format() );
+							the_post_navigation( array(
+									'prev_text'					=>					'Previous Post: %title',
+									'next_text'					=>					'Next Post: %title'
+								)
+							);
 
-			the_post_navigation();
-
-		endwhile; // End of the loop.
-		?>
-
+						endwhile; // End of the loop.
+						?>
+					</div>
+				</div>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-//get_sidebar();
 get_footer();

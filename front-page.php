@@ -41,12 +41,17 @@ get_header(); ?>
 
 	<?php endif; ?>
 
+	<?php
+		$the_query = new WP_Query( array( 'category_name' => 'blog' ) );
+
+	if ( $the_query->have_posts() ) : ?>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="container">
 				<div class="row clear">
 					<div class="col-12 col-12-m col-10-l center-l">
-						<?php while ( have_posts() ) : the_post(); ?>
+						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 							<a href="<?php the_permalink(); ?>">
 								<article class="blog-article">
 									<?php echo '<h2>' . get_the_title() . '</h2>'; ?>
@@ -57,6 +62,8 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
+
+<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

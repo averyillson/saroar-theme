@@ -2505,6 +2505,27 @@ object {
     z-index: 1;
     color: #fff; }
 
+.blog-article {
+  margin-bottom: 2rem; }
+
+.post-navigation {
+  padding: 2rem 0 3rem; }
+  .post-navigation .nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+    flex-wrap: wrap;
+    width: 100%; }
+    .post-navigation .nav-links .nav-next a,
+    .post-navigation .nav-links .nav-previous a {
+      flex: 0 1 auto;
+      display: block;
+      box-sizing: border-box;
+      height: 100px;
+      width: 100%;
+      line-height: 6rem; }
+
 /*--------------------------------------------------------------
 # Tablet Styles
 --------------------------------------------------------------*/
@@ -2530,4 +2551,6 @@ object {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 20px; } }
+    padding: 20px; }
+  .blog-article {
+    margin-bottom: 3rem; } }

@@ -112,7 +112,11 @@ add_action('init', 'modify_jquery');
  * Enqueue scripts and styles.
  */
 function saroar_scripts() {
-	wp_enqueue_style( 'saroar-style', get_stylesheet_uri() );
+
+	$date = date_create();
+	$cacheBust = date_timestamp_get($date);
+
+	wp_enqueue_style( 'saroar-style', get_stylesheet_uri(), null, $cacheBust );
 
 	wp_enqueue_script( 'saroar-default', get_template_directory_uri() . '/js/default.js', array(), '20151215', true );
 

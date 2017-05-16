@@ -141,3 +141,30 @@
 		color: #fff;
 	}
 }
+
+.blog-article {
+	margin-bottom: 2rem;
+}
+
+.post-navigation {
+	padding: 2rem 0 3rem;
+
+	.nav-links {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		align-content: stretch;
+		flex-wrap: wrap;
+		width: 100%;
+
+		.nav-next a,
+		.nav-previous a {
+			flex: 0 1 auto;
+			display: block;
+			box-sizing: border-box;
+			height: 100px;
+			width: 100%;
+			line-height: 6rem;
+		}
+	}
+}

@@ -31,13 +31,19 @@ get_header();
 					</div>
 				</div>
 			</header><!-- .entry-header -->
-			<?php
-				while ( have_posts() ) : the_post();
+			<div class="container">
+			  <div class="row clear">
+			    <div class="col-12 col-8-l col-10-m center-m center-l">
+						<?php
+							while ( have_posts() ) : the_post();
 
-					get_template_part( 'template-parts/content', get_post_format() );
+								get_template_part( 'template-parts/content', get_post_format() );
 
-				endwhile; // End of the loop.
-			?>
+							endwhile; // End of the loop.
+						?>
+					</div>
+				</div>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

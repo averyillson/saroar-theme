@@ -18,15 +18,19 @@ get_header(); ?>
 	<section class="leftSideContent">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
+				<div class="container-full">
+					<div class="row clear">
+						<div class="col-12 col-10-m col-10-l center-s center-m center-l">
+							<?php
+							while ( have_posts() ) : the_post();
 
-				<?php
-				while ( have_posts() ) : the_post();
+								get_template_part( 'template-parts/content', 'page' );
 
-					get_template_part( 'template-parts/content', 'page' );
-
-				endwhile; // End of the loop.
-				?>
-
+							endwhile; // End of the loop.
+							?>
+						</div>
+					</div>
+				</div>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</section>
